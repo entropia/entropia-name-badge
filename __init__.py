@@ -8,7 +8,7 @@ APP_PATH = "/".join(__file__.split("/")[:-1])
 sys.path.append(APP_PATH)
 teebeutel = "teebeutel.png"
 
-def reboot(pressed)
+def reboot(pressed):
     if pressed:
         exit_python()
 
