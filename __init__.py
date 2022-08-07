@@ -1,11 +1,18 @@
 import nvs
 import sys
+import buttons
 from display import *
 
 nickname = nvs.nvs_getstr("owner","nickname")
 APP_PATH = "/".join(__file__.split("/")[:-1])
 sys.path.append(APP_PATH)
 teebeutel = "teebeutel.png"
+
+def reboot(pressed)
+    if pressed:
+        exit_python()
+
+buttons.attach(buttons.BTN_HOME, reboot)
 
 drawFill(0xFFFFFF)
 drawPng(0,0,"%s/%s"% (APP_PATH, teebeutel))
